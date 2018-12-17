@@ -221,5 +221,15 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				m_Animator.applyRootMotion = false;
 			}
 		}
-	}
+
+        //Davanas tiek savaktas
+        void OnTriggerEnter(Collider other)
+        {
+            if (other.gameObject.CompareTag("present"))
+            {
+                other.gameObject.SetActive(false);
+            }
+        }
+
+    }
 }
